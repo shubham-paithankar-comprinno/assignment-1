@@ -226,10 +226,20 @@ fetch(LAPTOPS_URI).then(res => res.json()).then(data => {
             document.getElementById("laptop-select").style.display = 'none'
 
             featuresElement.style.display = 'block'
-            features.innerHTML = laptop.specs.join(`; `)
+            // features.innerHTML = laptop.specs.join(`; `)
+
+            if (features.innerHTML) features.innerHTML = ""
+
+            laptop.specs.forEach(e => {
+                const feature = document.createElement("LI")
+                const textNode = document.createTextNode(e)
+                feature.setAttribute("class", "m-1")
+                feature.appendChild(textNode)
+
+                features.appendChild(feature)
+            })
 
             laptopElement.style.display = 'block'
-
             laptopName.innerHTML = laptop.title
             laptopDescription.innerHTML = laptop.description
             laptopPrice.innerHTML = laptop.price
