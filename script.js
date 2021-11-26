@@ -8,7 +8,7 @@ let computerBought = Boolean(false)
 //Doms Objects
 const balance = document.getElementById("balance")
 const loanButton = document.getElementById("loan-btn")
-const outstandingLoanElement = document.getElementById("outstanding-load-element")
+const outstandingLoanElement = document.getElementById("outstanding-loan-element")
 const outstandingLoan = document.getElementById("outstanding-loan")
 const workSection = document.getElementById("work")
 const bankButton = document.getElementById("bank-btn")
@@ -65,9 +65,11 @@ const getLoan = () => { //function to get a loan
     }
 
     //Get loan amount
-    var loanAmount = prompt(`Enter the amount you like to borrow: \n(Loan amount should not be greater than double your current bank balance)`)
+    var loanAmount =  prompt(`Enter the amount you like to borrow: \n(Loan amount should not be greater than double your current bank balance)`)
 
-    if (loanAmount === null || isNaN(loanAmount)) {
+    if (loanAmount === null) return
+
+    if (isNaN(loanAmount)) {
         alert(`Please enter a value between 1 to ${parseInt(balance.innerHTML) * 2}`)
         return
     }

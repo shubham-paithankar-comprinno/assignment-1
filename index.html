@@ -15,42 +15,42 @@
     </nav>
     <div class="container">
         <div class="d-flex flex-row flex-wrap m-3">
-            <div id="the-bank" class="card card-body m-3 w-25 p-3">
+            <div id="the-bank" class="card card-body m-3 w-25 p-2">
                 <h3 class="card-title">Bank</h3>
-                <div class="card-text">
-                    <span>Balance: <span id="balance">100</span> INR</span>  
-                    <span id="outstanding-load-element">Outstanding Loan: <span id="outstanding-loan"></span> INR</span>
+                <div class="card-text h5 my-2">
+                    <span class="my-2">Balance: <span id="balance">100</span> INR</span>  
+                    <span id="outstanding-loan-element">Outstanding Loan: <span id="outstanding-loan"></span> INR</span>
                 </div>
-                <button class="btn btn-outline-success btn-sm mt-5 mb-1" id="loan-btn">Get a Loan</button>    
+                <button class="btn btn-outline-success btn-sm mt-auto mb-1" id="loan-btn">Get a Loan</button>    
             </div>
-            <div id="work" class="card card-body m-3 w-25 p-3">
+            <div id="work" class="card card-body m-3 w-25 p-2">
                 <h3 class="card-title">Work</h3>
-                <div class="card-text">
+                <div class="card-text h5 my-2">
                     <span class="card-text" id="">Pay: <span id="pay-amount">0</span> INR</span>
                 </div>
-                <div class="btn-group mt-5 mb-auto" id="button-group">
+                <div class="btn-group mt-auto mb-1 btn-group-sm" role="group" id="button-group">
                     <button class="btn btn-outline-warning btn-sm mx-2" id="bank-btn">Bank</button> 
                     <button class="btn btn-outline-primary btn-sm mx-2" id="work-btn">Work</button> 
                 </div>
             </div>
-            <div id="laptops" class="card card-body m-3 w-25 p-3">
+            <div id="laptops" class="card card-body m-3 w-50 p-2">
                 <h3 class="card-title">Laptops</h3>
                 <select class="form-select form-select-sm m-1" id="laptop-dropdown"></select>
-                <div class="card-text">
-                    <span class="m-2" id="features-element">Features:
-                        <p class="p-1" id="features"></p>
+                <div class="card-text mt-auto mb-1">
+                    <span class="" id="features-element">Features:
+                        <p class="p-1 h6" id="features"></p>
                     </span>
                 </div>
             </div>
-            <div id="laptops-info" class="card card-body m-3 p-3">
+            <div id="laptops-info" class="card card-body w-50 m-3 p-2">
                 <h3 class="card-title">Laptop Info</h3>
                 <span id="laptop-select">Select a laptop from laptops section</span>
-                <div id="laptop-element" class="m-2 card p-2">
-                    <h2 id="laptop-name"></h2>
-                    <img class="img-thumbnail rounded w-25 h-50 m-auto" src="./images/laptop.jpg" alt="laptop-image">
-                    <p class="" id="laptop-description"></p>
-                    <span class="p-1">Price: <span class="p-1" id="laptop-price"></span>INR</span> <br>
-                    <button class="btn btn-outline-info btn-lg my-2" id="buy-now-btn">Buy Now</button> 
+                <div id="laptop-element" class="m-2 card text-center">
+                    <h2 class="p-1 m-1" id="laptop-name"></h2>
+                    <img class="img-thumbnail rounded ml-auto" style="width: 200px; height: 200px;" src="./images/laptop.jpg" alt="laptop-image">
+                    <p class="p-2 m-2" id="laptop-description"></p>
+                    <span class="p-2 m-2">Price: <span class="p-1" id="laptop-price"></span>INR</span> <br>
+                    <button class="p-2 m-2 btn btn-outline-info btn-lg my-2" id="buy-now-btn">Buy Now</button> 
                 </div>
             </div>
         </div>
