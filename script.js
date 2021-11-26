@@ -178,17 +178,22 @@ const clearLoan = () => {
 
 }
 
+//Function to buy laptop
 const buyLaptop = () => {
     if (laptopPrice.innerHTML === "") return
 
+    //If balance is lower than laptop price
     if (parseInt(laptopPrice.innerHTML) > parseInt(balance.innerHTML)) {
         alert(`You dont have enough bank balance.`)
         return
     }
 
     balance.innerHTML = parseInt(balance.innerHTML) - parseInt(laptopPrice.innerHTML)
+
     alert(`Thank you for purchasing ${laptopName.innerHTML}!`)
+
     computerBought = Boolean(true)
+    
 }
 
 //Event Listeners
