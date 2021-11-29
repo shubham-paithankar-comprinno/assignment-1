@@ -27,7 +27,8 @@ const buyNowButton = document.getElementById("buy-now-btn")
 //Repay Button
 const repayButton = document.createElement("BUTTON")
 const textNode = document.createTextNode("Repay")
-repayButton.setAttribute("class", "btn btn-outline-danger btn-sm mx-2")
+repayButton.setAttribute("class", "btn mx-2")
+repayButton.setAttribute("id", "repay-btn")
 repayButton.appendChild(textNode)
 
 //Dropdown

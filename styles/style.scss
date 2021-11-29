@@ -1,0 +1,64 @@
+$blue: #283df7;
+$yellow: #f1cf0e;
+$red: #fa2d2d;
+$green: #07b407;
+$lightBlue: #4e73e4;
+
+// $transition-bezier: 1.000, 0.000, 0.000, 1.000;
+$transition-len: 0.35s;
+
+button {
+    overflow: hidden;
+    transition: all $transition-len;
+    // transition: all $transition-len cubic-bezier($transition-bezier); 
+}
+
+#loan-btn {
+    background-color: white;
+    border: 1px solid $blue;
+    color: $blue;
+    &:hover {
+        background-color: $blue;
+        color: white;
+    }
+ }
+
+#bank-btn {
+    background-color: white;  
+    border: 1px solid $yellow;
+    color: $yellow; 
+    &:hover {
+        background-color: $yellow;
+        color: white;
+    } 
+}
+
+#work-btn {
+    background-color: white; 
+    border: 1px solid $green;
+    color: $green; 
+    &:hover {
+        background-color: $green;
+        color: white;
+    } 
+}
+
+#repay-btn {
+    background-color: white; 
+    border: 1px solid $red;
+    color: $red; 
+    &:hover {
+        background-color: $red;
+        color: white;
+    } 
+}
+
+#buy-now-btn { 
+    background-color: white; 
+    border: 1px solid $lightBlue;
+    color: $lightBlue; 
+    &:hover {
+        background-color: $lightBlue;
+        color: white;
+    }
+}
