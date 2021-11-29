@@ -1,5 +1,5 @@
 //Variables 
-const LAPTOPS_URI = `https://noroff-komputer-store-api.herokuapp.com/computers`
+const LAPTOPS_URI = `https://noroff-komputer-store-api.herokuapp.com`
 
 //Booleans
 let loanTaken = Boolean(false)
@@ -22,6 +22,7 @@ const laptopElement = document.getElementById("laptop-element")
 const laptopName = document.getElementById("laptop-name")
 const laptopDescription = document.getElementById("laptop-description")
 const laptopPrice = document.getElementById("laptop-price")
+const laptopImage = document.getElementById("laptop-image")
 const buyNowButton = document.getElementById("buy-now-btn")
 
 //Repay Button
@@ -214,7 +215,7 @@ defaultOption.addEventListener("click", () => {
 
 
 //Fetch laptop data and attach objects to dropdown and laptop info
-fetch(LAPTOPS_URI).then(res => res.json()).then(data => {
+fetch(LAPTOPS_URI + `/computers`).then(res => res.json()).then(data => {
     data.forEach(laptop => {
         //Add each laptop as an option to select dropdown
         const option = document.createElement("OPTION")
@@ -242,6 +243,7 @@ fetch(LAPTOPS_URI).then(res => res.json()).then(data => {
 
             laptopElement.style.display = 'block'
             laptopName.innerHTML = laptop.title
+            laptopImage.src = LAPTOPS_URI + `/${laptop.image}`
             laptopDescription.innerHTML = laptop.description
             laptopPrice.innerHTML = laptop.price
         })
