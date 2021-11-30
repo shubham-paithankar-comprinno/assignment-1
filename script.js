@@ -216,19 +216,18 @@ defaultOption.addEventListener("click", () => {
 
 //Fetch laptop data and attach objects to dropdown and laptop info
 fetch(LAPTOPS_URI + `/computers`).then(res => res.json()).then(data => {
-    data.forEach(laptop => {
+    data.forEach((laptop, i) => {
         //Add each laptop as an option to select dropdown
         const option = document.createElement("OPTION")
         const textNode = document.createTextNode(laptop.title)
         option.appendChild(textNode)
         laptopDropdown.appendChild(option)
-
+        
         //On option select change laptop info
         option.addEventListener("click", () => {
             document.getElementById("laptop-select").style.display = 'none'
 
             featuresElement.style.display = 'block'
-            // features.innerHTML = laptop.specs.join(`; `)
 
             if (features.innerHTML) features.innerHTML = ""
 
@@ -243,7 +242,13 @@ fetch(LAPTOPS_URI + `/computers`).then(res => res.json()).then(data => {
 
             laptopElement.style.display = 'block'
             laptopName.innerHTML = laptop.title
-            laptopImage.src = LAPTOPS_URI + `/${laptop.image}`
+
+            if (i === 4) {
+                laptopImage.src = LAPTOPS_URI + `/${laptop.image.substring(0, laptop.image.length - 3)}` + `png`
+            } else {
+                laptopImage.src = LAPTOPS_URI + `/${laptop.image}`
+            }
+
             laptopDescription.innerHTML = laptop.description
             laptopPrice.innerHTML = laptop.price
         })
